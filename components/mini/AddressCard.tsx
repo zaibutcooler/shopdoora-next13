@@ -1,7 +1,15 @@
+import { gradientStyle } from "../main/hero/constant"
+
 const AddressCard = () => {
   return (
-    <div className="font-medium dark:font-base">
-      <h1 className="text-xl mb-4">ShopDoora Co., Ltd</h1>
+    <div className="font-base text-gray-500">
+      <h1 className="text-xl mb-4">
+        <span style={gradientStyle} className="font-bold">
+          ShopDoora
+        </span>
+        {"  "}
+        Co., Ltd
+      </h1>
       <div className="flex mb-3">
         <p className="w-[100px]">Address :</p>
         <div className="space-y-1">

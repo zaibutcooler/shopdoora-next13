@@ -24,6 +24,6 @@ export default async function ServiceDetailPage({
   const data = await filterData(params.lang, params.id)
 
   return (
-    <main className="pt-4 container mx-auto min-h-[95vh]">{data.title}</main>
+    <main className="pt-12 container mx-auto min-h-[95vh]">{data.title}</main>
   )
 }

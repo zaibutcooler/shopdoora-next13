@@ -7,6 +7,8 @@ import Logo from "@/public/logo.svg"
 import { useLanguage } from "@/hooks/useLanguage"
 import { ThemeToggle } from "@/components/theme-toggle"
 
+import { gradientStyle } from "../hero/constant"
+
 const Navbar = () => {
   const params = useParams()
   const isEnglish = params.lang === "en" ? true : false
@@ -25,8 +27,11 @@ const Navbar = () => {
     <main>
       <nav className="fixed left-0 top-0 w-full px-2 md:px-6 bg-white dark:bg-purple-950 backdrop-blur h-12 flex items-center justify-between border-b border-gray-100 dark:border-gray-900">
         <section className="flex justify-center items-center gap-12 font-medium text-sm pl-0 md:pl-4 lg:pl-6">
-          <Link href={`/${params.lang}/#root`} className="block pr-2">
-            Logo
+          <Link
+            href={`/${params.lang}/#root`}
+            className="block pr-2 text-lg font-bold"
+          >
+            <span style={gradientStyle}>ShopDoora</span>
           </Link>
           <Link
             href={`/${params.lang}/#service`}

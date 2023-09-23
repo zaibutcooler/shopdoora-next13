@@ -1,11 +1,25 @@
 export const heroEnglish = {
-  title: "Hello",
-  subTitle: "This is Subtitle",
-  services: ["Service One pr", "Service two", "Service Three Par"],
+  title: "Your Business Partner",
+  subTitle: "Digital Solutions for your Business",
+  services: [
+    "Efficient Point of Sale",
+    "Business Management",
+    "E-commerce Platform",
+  ],
 }
 
 export const heroBurmese = {
-  title: "ငွေကျပ်အနည်းဆုံး ၅ သိန်း ရှိရုံနဲ့",
-  subTitle: "This is Subtitle",
-  services: ["Service One pr", "Service two", "Service Three Par"],
+  title: "ငွေကျပ် အနည်းဆုံး သိန်း",
+  subTitle: "Digital Solutions for your Business",
+  services: [
+    "Efficient Point of Sale",
+    "Business Management",
+    "E-commerce Platform",
+  ],
+}
+
+export const gradientStyle = {
+  background: "linear-gradient(45deg, #ff00ff, #00ffff)",
+  WebkitBackgroundClip: "text",
+  color: "transparent",
 }

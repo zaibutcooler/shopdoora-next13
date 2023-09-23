@@ -24,3 +24,26 @@ export const footerContact = [
 ]
 
 export const footerLinks = [{ label: "", link: "" }]
+
+export const solutionData: LinkType[] = [
+  { label: "Commerce", link: "#" },
+  { label: "Software", link: "#" },
+  { label: "Marketing", link: "#" },
+  { label: "Analytics", link: "#" },
+]
+
+export const companyData: LinkType[] = [
+  { label: "Commerce", link: "#" },
+  { label: "Analytics", link: "#" },
+]
+
+export const supportData: LinkType[] = [
+  { label: "Commerce", link: "#" },
+  { label: "Software", link: "#" },
+  { label: "Marketing", link: "#" },
+]
+
+export interface LinkType {
+  label: string
+  link: string
+}

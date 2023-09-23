@@ -1,6 +1,7 @@
 "use client"
 
 import { FC } from "react"
+import { Home, Mail, Phone } from "lucide-react"
 
 import { useLanguage } from "@/hooks/useLanguage"
 import Header from "@/components/ui/header"
@@ -18,9 +19,11 @@ const AboutSection: FC<SectionProps> = ({ isEnglish }) => {
     <div className="min-h-[100vh]">
       <Header title={data.title} description={data.description} id="about" />
       <div className="flex justify-center items-center w-full">
-        <main className="flex gap-5 justify-between px-0 md:px-6 flex-col md:flex-row w-full md:w-[1200px]">
-          <section className="w-full md:w-2/5 flex justify-center">
-            <div className="w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-md bg-purple-800" />
+        <main className="flex gap-5 justify-between px-0 md:px-6 flex-col md:flex-row w-full md:w-[1200px] mb-4 md:mb-12">
+          <section className="w-full md:w-2/5 ">
+            <div className="flex justify-center">
+              <div className="w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-md bg-purple-800" />
+            </div>
           </section>
           <section className="w-full space-y-4  md:w-3/5  leading-6">
             <div className="flex w-full md:w-[600px] space-x-2 md:space-x-6 h-[110px] md:h-[128px]">

@@ -2,26 +2,48 @@ import Link from "next/link"
 
 import AddressCard from "@/components/mini/AddressCard"
 
-import { footerContact } from "./constant"
+import {
+  LinkType,
+  companyData,
+  footerContact,
+  solutionData,
+  supportData,
+} from "./constant"
 
 const Footer = () => {
+  const renderLink = (input: LinkType) => {
+    return (
+      <Link href={input.link} className="text-gray-500">
+        {input.label}
+      </Link>
+    )
+  }
+
   return (
-    <div className=" mt-6 md:mt-12">
+    <div className=" mt-6 md:mt-24">
       <section className="h-40 md:h-60 border-t">
         <main className="flex justify-between container mx-auto py-6">
           <div className="hidden md:block w-1/2 text-gray-700 dark:text-gray-300">
             <AddressCard />
           </div>
-          <div className="w-full text-sm md:w-1/2 grid grid-cols-3">
-            <div>
-              <p className="mb-6">Solutions</p>
-              <div>Marketing</div>
+          <div className="w-full text-sm md:w-1/2 grid grid-cols-3 text-gray-500">
+            <div className="space-y-5">
+              <p className="pb-3 text-black">Solutions</p>
+              {solutionData.map((item, index) => (
+                <div key={index}>{renderLink(item)}</div>
+              ))}
             </div>
-            <div>
-              <p className="mb-6">Company</p>
+            <div className="space-y-5">
+              <p className="pb-3 text-black">Company</p>
+              {companyData.map((item, index) => (
+                <div key={index}>{renderLink(item)}</div>
+              ))}
             </div>
-            <div>
-              <p className="mb-6">Support</p>
+            <div className="space-y-5">
+              <p className="pb-3 text-black">Support</p>
+              {supportData.map((item, index) => (
+                <div key={index}>{renderLink(item)}</div>
+              ))}
             </div>
           </div>
         </main>
