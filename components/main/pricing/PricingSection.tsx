@@ -1,9 +1,16 @@
 "use client"
 
 import { FC } from "react"
-import { Check } from "lucide-react"
+import {
+  Check,
+  CheckCheckIcon,
+  CheckCircle,
+  CheckCircle2,
+  CheckCircleIcon,
+} from "lucide-react"
 import toast from "react-hot-toast"
 
+import { cn } from "@/lib/utils"
 import { useLanguage } from "@/hooks/useLanguage"
 import { Button } from "@/components/ui/button"
 import {
@@ -29,9 +36,14 @@ const PricingSection: FC<SectionProps> = ({ isEnglish }) => {
       <main className="grid grid-cols-1 md:grid-cols-4 gap-4 font-medium">
         {data.map((item, index) => (
           <div key={index}>
-            <Card>
+            <Card className="dark:bg-stone-950">
               <CardHeader className="">
-                <CardTitle className="mb-2">{item.plan}</CardTitle>
+                <CardTitle className="mb-2 flex gap-2 items-center">
+                  <div className={cn("p-1 rounded-sm", item.iconCn)}>
+                    <item.icon className="w-4 h-4" />
+                  </div>
+                  <p>{item.plan}</p>
+                </CardTitle>
                 <CardDescription>{item.description}</CardDescription>
               </CardHeader>
               <CardContent>

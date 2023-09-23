@@ -8,6 +8,7 @@ import { useLanguage } from "@/hooks/useLanguage"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 import { gradientStyle } from "../hero/constant"
+import Sidebar from "./Sidebar"
 
 const Navbar = () => {
   const params = useParams()
@@ -25,23 +26,26 @@ const Navbar = () => {
 
   return (
     <main>
-      <nav className="fixed left-0 top-0 w-full px-2 md:px-6 bg-white dark:bg-purple-950 backdrop-blur h-12 flex items-center justify-between border-b border-gray-100 dark:border-gray-900">
-        <section className="flex justify-center items-center gap-12 font-medium text-sm pl-0 md:pl-4 lg:pl-6">
+      <nav className="fixed left-0 top-0 w-full px-2 md:px-6 bg-white dark:bg-stone-950 backdrop-blur h-12 flex items-center justify-between border-b border-gray-100 dark:border-gray-900">
+        <section className="flex justify-center items-center font-medium text-sm pl-0 md:pl-4 lg:pl-6">
+          <div className="md:hidden block mr-2">
+            <Sidebar />
+          </div>
           <Link
             href={`/${params.lang}/#root`}
-            className="block pr-2 text-lg font-bold"
+            className="block text-lg font-bold ml-2 md:mr-8"
           >
             <span style={gradientStyle}>ShopDoora</span>
           </Link>
           <Link
             href={`/${params.lang}/#service`}
-            className="text-sm hidden md:block"
+            className="mr-8 text-sm hidden md:block text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
           >
             Services
           </Link>
           <Link
             href={`/${params.lang}/#feature`}
-            className="text-sm hidden md:block"
+            className="mr-8 text-sm hidden md:block text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
           >
             Features
           </Link>
@@ -57,9 +61,12 @@ const Navbar = () => {
               {isEnglish ? "En" : "My"}
             </div>
           </Link>
-          <button className="text-sm font-medium w-28 py-2 rounded-full bg-purple-600 text-white hidden md:block">
+          <Link
+            href={`/${params.lang}/contact`}
+            className="hidden md:block text-sm w-28 py-2 text-center rounded-full bg-stone-900 text-white hover:bg-stone-800 transition duration-500 ease-in-out"
+          >
             Contact Now
-          </button>
+          </Link>
         </section>
       </nav>
     </main>

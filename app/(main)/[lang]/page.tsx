@@ -19,10 +19,10 @@ export default function HomePage({ params }: { params: { lang: string } }) {
   return (
     <main className="md:container px-4 md:px-0 md:mx-auto w-full">
       <HeroSection isEnglish={isEnglish} />
-      <CompaniesBanner />
       <AboutSection isEnglish={isEnglish} />
       <ServiceSection isEnglish={isEnglish} />
       <FeaturesSection isEnglish={isEnglish} language={params.lang} />
+      <CompaniesBanner />
       <PricingSection isEnglish={isEnglish} />
     </main>
   )

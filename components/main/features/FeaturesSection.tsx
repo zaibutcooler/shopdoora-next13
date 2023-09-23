@@ -27,30 +27,26 @@ const FeaturesSection: FC<SectionProps> = ({ isEnglish, language }) => {
             <Link
               href={`/${language}/feature/${item.route}`}
               key={item.title}
-              className="p-4 md:p-6 w-full block transition-colors group duration-500 ease-in-out mb-6 hover:bg-purple-50 rounded-md"
+              className="p-4 md:p-6 w-full block transition-colors group duration-500 ease-in-out mb-6 dark:hover:bg-stone-950 hover:bg-gray-50 rounded-md"
             >
               <div className="flex gap-4 items-center mb-5">
                 <div>
                   <div
-                    className={cn("w-fit p-1.5 rounded-md bg-indigo-300", "")}
+                    className={cn(
+                      "w-fit p-1.5 rounded-md",
+                      `${item.bgColor} ${item.iconColor}`
+                    )}
                   >
-                    {item.icon}
+                    <item.icon />
                   </div>
                 </div>
                 <div className="">
                   <h1 className="font-semibold">{item.title}</h1>
-                  <p className="text-gray-500 text-xs">
-                    This is short description for everyone
-                  </p>
+                  <p className="text-gray-500 text-xs">{item.subTitle}</p>
                 </div>
               </div>
               <div>
-                <p className="leading-6 text-sm mb-4">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Natus amet dolore nihil officiis eum delectus aliquid veniam
-                  officia dolor ad harum est, error reprehenderit expedita?
-                  Obcaecati, aspernatur ipsum. Qui, optio.
-                </p>
+                <p className="leading-6 text-sm mb-4">{item.description}</p>
 
                 <div className="text-gray-500 text-sm">
                   Time Duration :1 month

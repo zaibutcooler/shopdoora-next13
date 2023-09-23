@@ -30,12 +30,12 @@ const AboutSection: FC<SectionProps> = ({ isEnglish }) => {
               {minicardData.map((item, index) => (
                 <div
                   key={index}
-                  className="w-1/3 border rounded-md h-full mb-2 text-center py-3 px-2 font-medium"
+                  className="w-1/3 border rounded-md h-full mb-2 text-center py-3 px-2 font-medium dark:bg-stone-950"
                 >
-                  <i className="flex justify-center mb-2 md:mb-3">
-                    {item.icon}
+                  <i className="flex justify-center mb-2 mt-1">
+                    <item.icon className="w-5 md:w-6 h-5 md:h-6" />
                   </i>
-                  <h3 className="mb-1 font-semibold text-xs md:text-base">
+                  <h3 className="mb-1.5 font-semibold text-xs md:text-base">
                     {item.title}
                   </h3>
                   <p className="text-gray-500 md:text-xs text-[0.6rem] leading-normal">

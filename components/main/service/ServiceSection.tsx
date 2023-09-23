@@ -39,14 +39,16 @@ const ServiceSection: FC<SectionProps> = ({ isEnglish }) => {
           {data.services.map((item, index) => (
             <div
               key={index}
-              className="border rounded-md p-4 md:p-5 transition-colors group duration-500 ease-in-out cursor-pointer"
+              className="border rounded-md p-4 dark:bg-stone-950 hover:border-gray-400 md:p-5 transition-colors group duration-500 ease-in-out cursor-pointer"
               onClick={() => handleOpen(item)}
             >
-              <div className="mb-4">{item.icon}</div>
+              <div className="mb-4">
+                <item.icon />
+              </div>
               <h1 className="font-semibold mb-3 text-sm md:text-base">
                 {item.title}
               </h1>
-              <p className="mb-4 font-medium text-gray-500 text-xs md:text-base">
+              <p className="mb-4 font-medium text-gray-500 text-xs md:text-sm">
                 This is how I will fight so don't worry babe. I got ...
               </p>
               <p className="text-xs text-right text-gray-500 ">See Details</p>

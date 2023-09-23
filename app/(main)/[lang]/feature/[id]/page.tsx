@@ -1,8 +1,11 @@
+import { Icon } from "lucide-react"
+
 import {
   FeatureType,
   featuresBurmese,
   featuresEnglish,
 } from "@/components/main/features/constant"
+import FeatureHeader from "@/components/mini/FeatureHeader"
 
 export default async function ServiceDetailPage({
   params,
@@ -24,6 +27,15 @@ export default async function ServiceDetailPage({
   const data = await filterData(params.lang, params.id)
 
   return (
-    <main className="pt-12 container mx-auto min-h-[95vh]">{data.title}</main>
+    <main className="">
+      <FeatureHeader
+        title={data.title}
+        description="This is mini description for my app"
+        icon={data.icon}
+        iconColor={data.iconColor}
+        bgColor={data.bgColor}
+      />
+      {data.title}
+    </main>
   )
 }

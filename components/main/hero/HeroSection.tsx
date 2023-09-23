@@ -15,7 +15,7 @@ interface SectionProps {
 const HeroSection: FC<SectionProps> = ({ isEnglish }) => {
   const data = isEnglish ? heroEnglish : heroBurmese
   return (
-    <div className="h-[90vh] w-full flex items-center justify-center" id="root">
+    <div className="h-[95vh] w-full flex items-center justify-center" id="root">
       <div className="text-white font-bold py-36 text-center space-y-5">
         <div className="text-2xl md:text-5xl space-y-5 font-bold">
           <h1 className="text-black dark:text-white mb-2 flex">

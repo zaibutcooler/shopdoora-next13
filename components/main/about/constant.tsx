@@ -1,4 +1,4 @@
-import { Lightbulb } from "lucide-react"
+import { Briefcase, Lightbulb, Rocket, ShieldCheck } from "lucide-react"
 
 export const aboutEnglish = {
   title: "About Our Company",
@@ -22,18 +22,18 @@ export const aboutBurmese = {
 
 export const minicardData = [
   {
-    icon: <Lightbulb />,
-    title: "Experience",
-    text: "This is the text that I can provide",
+    icon: Briefcase,
+    title: "Professional",
+    text: "Delivering tailored solutions.",
   },
   {
-    icon: <Lightbulb />,
-    title: "Experience",
-    text: "This is the text that I can provide",
+    icon: Rocket,
+    title: "Fast",
+    text: "Efficient and fast results.",
   },
   {
-    icon: <Lightbulb />,
-    title: "Experience",
-    text: "This is the text that I can provide",
+    icon: ShieldCheck,
+    title: "Reliable",
+    text: "Count on us your digital solutions",
   },
 ]
