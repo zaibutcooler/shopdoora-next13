@@ -6,6 +6,7 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/hooks/useLanguage"
 import { Button } from "@/components/ui/button"
+import Header from "@/components/ui/header"
 
 import { featuresBurmese, featuresEnglish } from "./constant"
 
@@ -18,16 +19,8 @@ const FeaturesSection: FC<SectionProps> = ({ isEnglish, language }) => {
   const data = isEnglish ? featuresEnglish : featuresBurmese
 
   return (
-    <div className="min-h-[70vh]" id="feature">
-      <header className="w-full text-center leading-6 mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold mb-3">
-          Product Features
-        </h1>
-        <p className="text-gray-500">
-          ShopDoora e-Commerce တွင် ပါဝင်မည့် Features များ
-        </p>
-      </header>
-
+    <div className="min-h-[70vh]">
+      <Header title={data.title} description={data.description} id="feature" />
       <main className="flex justify-center font-medium ">
         <div className="w-full md:w-[1200px]  md:grid grid-cols-3 gap-4">
           {data.features.map((item) => (

@@ -7,10 +7,14 @@ export interface Service {
 }
 
 export interface ServiceProps {
+  title: string
+  description: string
   services: Service[]
 }
 
 export const serviceEnglish: ServiceProps = {
+  title: "Our Services",
+  description: "Our products provide various solutions for everyone.",
   services: [
     {
       title: "Service 1",
@@ -64,6 +68,8 @@ export const serviceEnglish: ServiceProps = {
 }
 
 export const serviceBurmese = {
+  title: "Our Services",
+  description: "Our products provide various solutions for everyone.",
   services: [
     {
       title: "Service 1 (Burmese)",

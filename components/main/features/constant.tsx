@@ -3,6 +3,9 @@ import { Icon, PanelTop, ShoppingCart, Store } from "lucide-react"
 import { FaStore } from "react-icons/fa"
 
 export const featuresBurmese = {
+  title: "Product Features",
+  description:
+    "We provide 3 features for our digital products/solutions for customers.",
   features: [
     {
       route: "seller-app",
@@ -23,6 +26,9 @@ export const featuresBurmese = {
 }
 
 export const featuresEnglish = {
+  title: "Product Features",
+  description:
+    "We provide 3 features for our digital products/solutions for customers.",
   features: [
     {
       route: "seller-app",

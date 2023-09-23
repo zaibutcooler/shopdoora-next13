@@ -4,6 +4,7 @@ import { FC, useState } from "react"
 
 import { useLanguage } from "@/hooks/useLanguage"
 import { useModal } from "@/hooks/useModal"
+import Header from "@/components/ui/header"
 import ServiceModal from "@/components/mini/ServiceModal"
 
 import { Service, serviceBurmese, serviceEnglish } from "./constant"
@@ -32,23 +33,20 @@ const ServiceSection: FC<SectionProps> = ({ isEnglish }) => {
   return (
     <div className="min-h-[90vh]">
       {open && <ServiceModal item={service} close={handleClose} />}
-      <header className="w-full text-center leading-6 mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold mb-3">Our Services</h1>
-        <p className="text-gray-500">
-          ShopDoora e-Commerce တွင် ပါဝင်မည့် Features များ
-        </p>
-      </header>
+      <Header title={data.title} description={data.description} id="service" />
       <div className="flex justify-center w-full">
         <main className="grid grid-cols-2 md:grid-cols-4 w-[1200px] gap-3 md:gap-5">
           {data.services.map((item, index) => (
             <div
               key={index}
-              className="border rounded-md p-5 transition-colors group duration-500 ease-in-out cursor-pointer"
+              className="border rounded-md p-4 md:p-5 transition-colors group duration-500 ease-in-out cursor-pointer"
               onClick={() => handleOpen(item)}
             >
               <div className="mb-4">{item.icon}</div>
-              <h1 className="font-semibold mb-3">{item.title}</h1>
-              <p className="mb-4 font-medium text-gray-500">
+              <h1 className="font-semibold mb-3 text-sm md:text-base">
+                {item.title}
+              </h1>
+              <p className="mb-4 font-medium text-gray-500 text-xs md:text-base">
                 This is how I will fight so don't worry babe. I got ...
               </p>
               <p className="text-xs text-right text-gray-500 ">See Details</p>

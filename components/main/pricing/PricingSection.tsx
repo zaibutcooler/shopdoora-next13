@@ -25,7 +25,7 @@ const PricingSection: FC<SectionProps> = ({ isEnglish }) => {
   const data = isEnglish ? pricingEnglish : pricingBurmese
 
   return (
-    <div className="min-h-80 px-0 md:px-4">
+    <div className="min-h-80 px-0 md:px-4 pt-8">
       <main className="grid grid-cols-1 md:grid-cols-4 gap-4 font-medium">
         {data.map((item, index) => (
           <div key={index}>
