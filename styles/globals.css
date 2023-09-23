@@ -83,3 +83,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.disable-scrollbar {
+  overflow: hidden !important;
+}
