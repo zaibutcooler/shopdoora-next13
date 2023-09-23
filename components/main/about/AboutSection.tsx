@@ -26,7 +26,7 @@ const AboutSection: FC<SectionProps> = ({ isEnglish }) => {
             </div>
           </section>
           <section className="w-full space-y-4  md:w-3/5  leading-6">
-            <div className="flex w-full md:w-[600px] space-x-2 md:space-x-6 h-[110px] md:h-[128px]">
+            <div className="flex w-full md:w-[600px] space-x-2 md:space-x-6 h-[110px] md:h-[128px] ">
               {minicardData.map((item, index) => (
                 <div
                   key={index}
@@ -49,6 +49,7 @@ const AboutSection: FC<SectionProps> = ({ isEnglish }) => {
               <p
                 className="text-sm md:text-base text-gray-800 dark:text-gray-300 "
                 key={index}
+                style={{ textAlign: "justify" }}
               >
                 {item}
               </p>
