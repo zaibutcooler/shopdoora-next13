@@ -22,7 +22,7 @@ export default function HomePage({ params }: { params: { lang: string } }) {
       <AboutSection isEnglish={isEnglish} />
       <ServiceSection isEnglish={isEnglish} />
       <FeaturesSection isEnglish={isEnglish} language={params.lang} />
-      <CompaniesBanner />
+      <CompaniesBanner isEnglish={isEnglish} />
       <PricingSection isEnglish={isEnglish} />
     </main>
   )

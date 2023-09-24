@@ -1,6 +1,8 @@
 "use client"
 
 import { FC } from "react"
+import Link from "next/link"
+import { useParams, useRouter } from "next/navigation"
 import TypewriterComponent from "typewriter-effect"
 
 import { useLanguage } from "@/hooks/useLanguage"
@@ -14,6 +16,8 @@ interface SectionProps {
 
 const HeroSection: FC<SectionProps> = ({ isEnglish }) => {
   const data = isEnglish ? heroEnglish : heroBurmese
+  const params = useParams()
+
   return (
     <div className="h-[95vh] w-full flex items-center justify-center" id="root">
       <div className="text-white font-bold py-36 text-center space-y-5">
@@ -38,14 +42,17 @@ const HeroSection: FC<SectionProps> = ({ isEnglish }) => {
           {data.subTitle}
         </div>
         <div className="flex gap-4 justify-center">
-          <Button className="rounded-full"> Get Started </Button>
-          <Button
-            className="rounded-full text-black dark:text-indigo-50"
-            variant="outline"
-          >
-            {" "}
-            About Us{" "}
-          </Button>
+          <Link href={`/${params.lang}/contact`}>
+            <Button className="rounded-full"> Contact Now </Button>
+          </Link>
+          <a href={`/${params.lang}/#about`}>
+            <Button
+              className="rounded-full text-black dark:text-indigo-50"
+              variant="outline"
+            >
+              About Us
+            </Button>
+          </a>
         </div>
       </div>
     </div>

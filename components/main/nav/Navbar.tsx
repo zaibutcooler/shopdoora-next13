@@ -51,22 +51,16 @@ const Navbar = () => {
           </Link>
         </section>
         <section className="space-x-4 flex items-center">
-          <ThemeToggle />
           <Link
             className="w-10 h-10 hover:bg-gray-100 block rounded-md"
             href={go}
             onClick={toggleLanguage}
           >
             <div className="flex justify-center items-center w-full h-full font-semibold text-md">
-              {isEnglish ? "En" : "My"}
+              {!isEnglish ? "En" : "My"}
             </div>
           </Link>
-          <Link
-            href={`/${params.lang}/contact`}
-            className="hidden md:block text-sm w-28 py-2 text-center rounded-full bg-stone-900 text-white hover:bg-stone-800 transition duration-500 ease-in-out"
-          >
-            Contact Now
-          </Link>
+          <ThemeToggle />
         </section>
       </nav>
     </main>

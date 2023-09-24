@@ -4,8 +4,6 @@ import { FC } from "react"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { useLanguage } from "@/hooks/useLanguage"
-import { Button } from "@/components/ui/button"
 import Header from "@/components/ui/header"
 
 import { featuresBurmese, featuresEnglish } from "./constant"
@@ -46,10 +44,15 @@ const FeaturesSection: FC<SectionProps> = ({ isEnglish, language }) => {
                 </div>
               </div>
               <div>
-                <p className="leading-6 text-sm mb-4">{item.description}</p>
+                <p
+                  className="leading-6 text-sm mb-4"
+                  style={{ textAlign: "justify" }}
+                >
+                  {item.description}
+                </p>
 
                 <div className="text-gray-500 text-sm">
-                  Time Duration :1 month
+                  Development Duration : {item.developmentDuration}
                 </div>
               </div>
             </Link>

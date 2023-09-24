@@ -15,7 +15,10 @@ import {
 const Footer = () => {
   const renderLink = (input: LinkType) => {
     return (
-      <Link href={input.link} className="text-gray-500">
+      <Link
+        href={input.link}
+        className="text-gray-500 hover:text-gray-800 dark:hover:text-gray-300"
+      >
         {input.label}
       </Link>
     )
@@ -26,7 +29,7 @@ const Footer = () => {
       <section className="h-36 md:h-60 border-t ">
         <main className="md:flex justify-between container mx-auto py-6 hidden">
           <div className="w-2/5 text-gray-700 dark:text-gray-300">
-            <AddressCard />
+            <AddressCard primary={false} />
           </div>
           <div className="w-full text-sm md:w-3/5 grid grid-cols-3 text-gray-500">
             <div className="space-y-5">
@@ -67,7 +70,9 @@ const Footer = () => {
         <div className="flex items-center text-gray-500 space-x-10 text-xl mb-4 md:mb-0">
           {footerContact.map((item) => (
             <Link href={item.link} key={item.platform}>
-              {item.icon}
+              <span className="hover:text-gray-800 dark:hover:text-gray-300">
+                {item.icon}
+              </span>
             </Link>
           ))}
         </div>

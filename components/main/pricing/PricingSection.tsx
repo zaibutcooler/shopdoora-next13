@@ -1,17 +1,7 @@
-"use client"
-
 import { FC } from "react"
-import {
-  Check,
-  CheckCheckIcon,
-  CheckCircle,
-  CheckCircle2,
-  CheckCircleIcon,
-} from "lucide-react"
-import toast from "react-hot-toast"
+import { Check } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { useLanguage } from "@/hooks/useLanguage"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -58,9 +48,7 @@ const PricingSection: FC<SectionProps> = ({ isEnglish }) => {
                 ))}
               </CardContent>
               <CardFooter>
-                <Button onClick={() => toast.success("hi")} className="w-full">
-                  Buy Plan
-                </Button>
+                <Button className="w-full">Buy Plan</Button>
               </CardFooter>
             </Card>
           </div>

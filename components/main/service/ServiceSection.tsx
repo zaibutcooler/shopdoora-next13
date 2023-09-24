@@ -2,8 +2,7 @@
 
 import { FC, useState } from "react"
 
-import { useLanguage } from "@/hooks/useLanguage"
-import { useModal } from "@/hooks/useModal"
+import { truncate } from "@/lib/utils"
 import Header from "@/components/ui/header"
 import ServiceModal from "@/components/mini/ServiceModal"
 
@@ -15,7 +14,6 @@ interface SectionProps {
 
 const ServiceSection: FC<SectionProps> = ({ isEnglish }) => {
   const data = isEnglish ? serviceEnglish : serviceBurmese
-  const modal = useModal()
 
   const [service, setService] = useState<Service | null>(null)
   const [open, setOpen] = useState(false)
@@ -39,19 +37,22 @@ const ServiceSection: FC<SectionProps> = ({ isEnglish }) => {
           {data.services.map((item, index) => (
             <div
               key={index}
-              className="border rounded-md p-4 dark:bg-stone-950 hover:border-gray-400 md:p-5 transition-colors group duration-500 ease-in-out cursor-pointer"
+              className="border rounded-md p-4 dark:bg-stone-950 hover:border-indigo-300 dark:hover:border-indigo-900 md:p-5 transition-colors group duration-500 ease-in-out cursor-pointer"
               onClick={() => handleOpen(item)}
             >
-              <div className="mb-4">
-                <item.icon />
+              <div className="mb-4 ">
+                <item.icon className="p-1.5 rounded-md bg-gray-100 dark:bg-gray-900 text-gray-500 w-8 h-8 group-hover:bg-indigo-500/10 group-hover:text-indigo-500 dark:group-hover:text-indigo-300  dark:group-hover:bg-indigo-900 transition-colors group duration-500 ease-in-out cursor-pointer" />
               </div>
-              <h1 className="font-semibold mb-3 text-sm md:text-base">
+              <h1 className="font-semibold mb-3 text-xs md:text-base">
                 {item.title}
               </h1>
-              <p className="mb-4 font-medium text-gray-500 text-xs md:text-sm">
-                This is how I will fight so don't worry babe. I got ...
+              <p className="mb-4 font-base text-gray-500 text-xs md:text-sm truncate">
+                {truncate(item.description, 50)}
               </p>
-              <p className="text-xs text-right text-gray-500 ">See Details</p>
+
+              <p className="text-xs text-right text-gray-500 group-hover:text-indigo-400 dark:group-hover:text-indigo-700 transition-colors group duration-500 ease-in-out cursor-pointer">
+                See Details
+              </p>
             </div>
           ))}
         </main>

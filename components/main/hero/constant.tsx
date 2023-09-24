@@ -9,8 +9,8 @@ export const heroEnglish = {
 }
 
 export const heroBurmese = {
-  title: "ငွေကျပ် အနည်းဆုံး သိန်း",
-  subTitle: "Digital Solutions for your Business",
+  title: "နှင့် အတူ လက်တွဲ ၍",
+  subTitle: "လုပ်ငန်း အား တဆင့်မြှင့် လို့ရပါပြီ",
   services: [
     "Efficient Point of Sale",
     "Business Management",
